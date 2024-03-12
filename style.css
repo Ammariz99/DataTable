@@ -2,11 +2,11 @@
     padding: 0;
     margin: 0;
     box-sizing:border-box;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;    
 }
 
 body{
-    background: #f5f0f0;
+    background: linear-gradient(45deg, #49a09d, #5f2c82);
     display:flexbox;
     justify-content: center;
     align-items: center;
@@ -18,8 +18,8 @@ body{
 
     background: #fff;
     box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
- width: 100%;
-    overflow-x: auto;       
+    width: 100%;
+    overflow: auto;       
 }
 
 
@@ -28,48 +28,60 @@ body{
     padding: 2rem 1rem;
     font-size: 2.5rem;
     text-align: center;
+    text-decoration: underline;
 }
 
-.Tcontainer{
+.Table-container{
     margin: 0 auto;
     height: 80vh;
-    width: 100%;
-    max-width: 90%;
+    width: 90%;
     overflow: auto;
 }
 
 
 .dataTable{
     width: 100%;
-    border-collapse: collapse;
+    border-collapse:collapse;
+    white-space: nowrap;
 
 }
 
+.sticky-select{
+    position: sticky;
+    left: 0;
+    background: #4D8D99;
+    color: #fff;
+    z-index: 2;
+}
 
 .dataTable thead{
     
-    background: #424942;
+    background: linear-gradient(45deg, #49a09d, #5f2c82);
     color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    
 }
 
 .dataTable thead tr th{
     font-size: 0.9rem;
     padding: 0.8rem;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.1rem;
     vertical-align: top;
     border: 1px solid  #aab7b8;
-    
+    cursor: pointer;
 
 }
 
 
 .dataTable tbody tr td{
     font-size: 1rem;
-    letter-spacing: 0.2rem ;
     font-weight:  normal;
     text-align: center;
     border: 1px solid #aab7b8;
     padding: 0.8rem;
+    
 }
 
 .dataTable  tr:nth-child(even){
@@ -77,8 +89,9 @@ background: #ccc;
 }
 
 .dataTable tr:hover td{
-background: #839192;
-color: #000;
+background: #5D959A;
+color: #fff;
+
 transition: all 0.3sec ease-in ;
 cursor: pointer;
 
@@ -98,7 +111,10 @@ cursor: pointer;
 .btn-vendor{
     background: #0a8bac;
     color: #fff;
+    
+    
 }
+
 
 .btn-edit{
     background: #1e8449;
@@ -109,6 +125,8 @@ cursor: pointer;
     background: #e74c3c;
     color: #fff;
 }
+
+
 
 
 @media screen and (max-width: 768px) {
